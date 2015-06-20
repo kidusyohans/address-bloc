@@ -83,6 +83,11 @@ class MenuController
   end
   
   def read_csv
+    filename = gets.chomp
+    
+    begin
+      @address_book.import_from_csv(filename)
+    end
   end
 end
   
